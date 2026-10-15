@@ -58,10 +58,16 @@ DS ¥377.89 │ 高峰 │ 1h23m→空闲
 ## 安装
 
 ```sh
-omp plugin install git:github.com/Ol925/omp-deepseek-peak
+omp plugin install github:Ol925/omp-deepseek-peak
 ```
 
 然后重启 `omp`。在 `omp` 里输入 `/ds` 验证。
+
+整个安装只占 **约 0.2 MB**（实测 25 个文件），**不需要 `npm install`**——扩展运行时零第三方依赖。
+也可以写完整地址 `omp plugin install https://github.com/Ol925/omp-deepseek-peak`。
+
+> 注意前缀是 `github:` 而不是 `git:`。`omp plugin install` 底层走 `bun install` 的依赖说明符解析，
+> `git:github.com/...` 会被当成主机名叫 `git` 去解析而失败（那是 pi 的约定，不是 omp 的）。
 
 <details>
 <summary>其他安装方式</summary>
