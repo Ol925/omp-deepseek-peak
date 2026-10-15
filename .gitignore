@@ -1,0 +1,18 @@
+# 依赖（用户安装扩展时不需要，扩展运行时零依赖）
+node_modules/
+
+# 构建/检查缓存
+*.tsbuildinfo
+
+# 编辑器与系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# 日志
+npm-debug.log*
+yarn-error.log*
+
+# 注意：holidays.ts 虽然由 tools/gen-holidays.mjs 生成，但必须提交。
+# 用户是通过 Git 安装的，不会去跑生成器；不提交它扩展就直接跑不起来。

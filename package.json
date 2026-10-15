@@ -1,0 +1,60 @@
+{
+  "name": "omp-deepseek-peak",
+  "version": "0.1.0",
+  "description": "oh-my-pi (omp) 扩展：在状态栏与 TUI 面板中显示 DeepSeek 余额、峰谷时段与切换倒计时",
+  "keywords": [
+    "omp",
+    "oh-my-pi",
+    "pi-coding-agent",
+    "extension",
+    "plugin",
+    "deepseek",
+    "balance",
+    "pricing",
+    "off-peak",
+    "cost"
+  ],
+  "homepage": "https://github.com/Ol925/omp-deepseek-peak#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ol925/omp-deepseek-peak.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ol925/omp-deepseek-peak/issues"
+  },
+  "author": "Ol925",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.6"
+  },
+  "omp": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "files": [
+    "index.ts",
+    "peak.ts",
+    "balance.ts",
+    "holidays.ts",
+    "update-check.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "preflight": "node tools/preflight.mjs",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node tests/peak.test.mts && node tests/update.test.mts",
+    "gen-holidays": "node tools/gen-holidays.mjs",
+    "deploy": "node tools/deploy.mjs",
+    "verify": "node tools/deploy.mjs --verify"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@oh-my-pi/pi-coding-agent": "^18.11.0",
+    "@types/node": "^26.6.5",
+    "chinese-days": "^1.5.9",
+    "typescript": "^7.0.2"
+  }
+}

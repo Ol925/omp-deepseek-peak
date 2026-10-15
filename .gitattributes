@@ -1,0 +1,12 @@
+# 统一按 LF 存储和检出，避免 Windows / macOS / Linux 之间
+# 因为换行符差异产生「整个文件都改了」的假 diff。
+* text=auto eol=lf
+
+# 二进制文件不做换行转换
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
