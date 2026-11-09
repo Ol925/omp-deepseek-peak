@@ -54,7 +54,7 @@
   "devDependencies": {
     "@oh-my-pi/pi-coding-agent": "^18.11.0",
     "@types/node": "^26.6.5",
-    "chinese-days": "^1.5.9",
+    "chinese-days": "^1.5.10",
     "typescript": "^7.0.2"
   }
 }
